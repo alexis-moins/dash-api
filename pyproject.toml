@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "flash-cards-api"
+version = "0.1.0"
+description = "Flask REST API to manage multiple collections of flash cards 🚀"
+authors = ["AlexisMoins <moinsalexis@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Django = "^4.1"
+djangorestframework = "^3.13.1"
+djongo = "^1.3.6"
+python-dotenv = "^0.20.0"
+
+[tool.poetry.dev-dependencies]
+django-stubs = "^1.12.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
