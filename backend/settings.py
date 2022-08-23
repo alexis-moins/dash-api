@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'https://django-flash-cards.herokuapp.com',
+    'django-flash-cards.herokuapp.com',
     '127.0.0.1'
 ]
 
@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    # 'corsheaders',
+    'corsheaders',
 
     'rest_framework',
     'rest_framework.authtoken',
@@ -59,7 +59,9 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
 
-    # 'corsheaders.middleware.CorsMiddleware',
+    # Must be placed before WhiteNoise and CommonMiddleware
+    'corsheaders.middleware.CorsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -134,6 +136,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 STATIC_URL = 'static/'
 
 # Default primary key field type
@@ -154,3 +158,9 @@ REST_FRAMEWORK = {
         # 'rest_framework.permissions.IsAuthenticated'
     ]
 }
+
+# CORS_URLS_REGEX = r'^/api/.*$'
+
+# Allow cross origin calls from everywhere
+# TODO -> Change this to only allow requests from the front heroku app!
+CORS_ALLOW_ALL_ORIGINS = True
