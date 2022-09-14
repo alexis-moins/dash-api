@@ -1,6 +1,6 @@
-# ...
+# Dash API
 
-... is a Django REST API providing a way to manage multiple collections of flash cards locally.
+Dash API is a Django REST API providing a way to manage multiple collections of flash cards locally.
 
 ## Installation
 
@@ -9,7 +9,7 @@
 Start by cloning the repository to get the files on your machine.
 
 ```bash
-git clone git@github.com:AlexisMoins/flash-card-api.git ~/somewhere-on-your-machine
+git clone git@github.com:AlexisMoins/dash-api.git ~/somewhere-on-your-machine
 ```
 
 ### Fetching the dependencies
