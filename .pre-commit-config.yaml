@@ -22,10 +22,3 @@ repos:
     hooks:
       - id: poetry-check
       - id: poetry-lock
-
-  # - repo: https://github.com/gitguardian/ggshield
-  #   rev: v1.13.0
-  #   hooks:
-  #     - id: ggshield
-  #       language_version: python3
-  #       stages: [commit]
