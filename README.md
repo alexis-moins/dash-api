@@ -30,10 +30,9 @@ If everything goes well, you should now have all the required dependencies insta
 
 ## Setting up
 
-For the django server to work, you now need to generate your very own `SECRET_KEY` (not to mention that once generated, you should not make it available publically). To do so, open a python interpreter (activate your virtual environment first!) and paste the following code into the interpreter :
-```python
-from django.core.management.utils import get_random_secret_key
-print(get_random_secret_key())
+For the django server to work, you now need to generate your very own `SECRET_KEY` (not to mention that once generated, you should not make it available publically). To do so, activate your virtual environment first and execute the following command :
+```bash
+./generate_secret_key
 ```
 
 Then copy / paste the result into a file called `.env`, located at the root of the project, while following the template below :
