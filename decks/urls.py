@@ -1,7 +1,6 @@
 from django.urls import path
 from . import views
 
-
 urlpatterns = [
     path('', views.DeckListCreateView.as_view()),
     path('<int:id>', views.DeckRetrieveView.as_view()),

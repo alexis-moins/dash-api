@@ -43,8 +43,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'corsheaders',
-
     'rest_framework',
     'rest_framework.authtoken',
 
@@ -56,9 +54,6 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-
-    # Must be placed before WhiteNoise and CommonMiddleware
-    'corsheaders.middleware.CorsMiddleware',
 
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -155,9 +150,3 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ]
 }
-
-# CORS_URLS_REGEX = r'^/api/.*$'
-
-# Allow cross origin calls from everywhere
-# TODO -> Change this to only allow requests from the front heroku app!
-CORS_ALLOW_ALL_ORIGINS = True
